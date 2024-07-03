@@ -21,6 +21,20 @@ body {
   font-family: var(--font--firacode);
   background: #282C33
 }
+@keyframes typing {
+  from {width: 0;}
+  to {width: 100%;}
+}
+.typed{
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 2.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
 
 @layer utilities {
   .text-balance {

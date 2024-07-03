@@ -10,7 +10,7 @@ const Navbar = () => {
       <div
         className={`flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 px-10 xl:px-0 pt-5`}
       >
-        <section className="flex flex-col items-center gap-3 top-0 md:left-3 xl:left-12 lg:left-8 hidden md:block md:absolute">
+        <section className="flex flex-col items-center gap-3 top-0 md:left-3 xl:left-12 lg:left-8 hidden md:block md:fixed">
           <div className="h-[191px] w-[1px] bg-[#ABB2BF] mx-auto mb-2" />
           <div className="flex flex-col gap-3">
             <Image src={Github} alt="Github" className="w-full" />
