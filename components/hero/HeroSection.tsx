@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-16 md:px-16 xl:px-0 py-3">
+    <div className="flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-3">
       <div className="grid grid-flow-row gap-3">
         <h1>Blossom is a web designer and front-end developer</h1>
         <h3>She crafts responsive websites where technologies meet creativity</h3>

@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-16 md:px-16 xl:px-0 py-3 ">
+    <div className="flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-5 border-t border-b-[#ABB2BF] mt-12">
       <div className="grid grid-flow-row gap-2">
         <section>
           <div className="flex gap-3">

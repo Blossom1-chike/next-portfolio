@@ -4,7 +4,7 @@ import React from "react";
 
 const QuoteSection = () => {
   return (
-    <div className="flex flex-col relative justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-16 md:px-16 xl:px-0 py-3">
+    <div className="flex flex-col relative justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-3">
         <Image className="absolute right-0 w-[50px] top-10" src={Rectangle1} alt="" />
       <div>
         <fieldset className="w-fit border border-[#ABB2BF] p-5 relative">

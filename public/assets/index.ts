@@ -10,8 +10,14 @@ import Quote from "@/assets/quote.svg";
 import Rectangle1 from "@/assets/rectangle-1.svg";
 import Dots1 from "@/assets/dots-1.svg";
 import Banner from "@/assets/banner.svg";
+import SkillsBanner from "@/assets/skills.svg";
+import MemojiAbout from "@/assets/memoji-about.svg";
+import Rectangle2 from "@/assets/rectangle-2.svg";
 
 export  {
+    Rectangle2,
+    MemojiAbout,
+    SkillsBanner,
     Banner,
     Dots1,
     Quote,

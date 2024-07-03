@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <div className="relative">
       <div
-        className={`flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-16 md:px-16 xl:px-0 py-3 `}
+        className={`flex justify-between items-center w-full h-full max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-3 `}
       >
-        <section className="flex flex-col items-center gap-3 top-0 left-3 absolute">
+        <section className="flex flex-col items-center gap-3 top-0 md:left-3 xl:left-12 lg:left-8 absolute">
           <div className="h-[191px] w-[1px] bg-[#ABB2BF] " />
           <div className="flex flex-col gap-3">
             <Image src={Github} alt="Github" className="w-full" />
