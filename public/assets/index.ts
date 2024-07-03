@@ -13,8 +13,14 @@ import Banner from "@/assets/banner.svg";
 import SkillsBanner from "@/assets/skills.svg";
 import MemojiAbout from "@/assets/memoji-about.svg";
 import Rectangle2 from "@/assets/rectangle-2.svg";
+import Rectangle3 from "@/assets/rectangle-3.svg";
+import Hamburger from "@/assets/hamburger.svg";
+import Close from "@/assets/close.svg";
 
 export  {
+    Close,
+    Hamburger,
+    Rectangle3,
     Rectangle2,
     MemojiAbout,
     SkillsBanner,

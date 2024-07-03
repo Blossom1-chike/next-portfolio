@@ -4,27 +4,27 @@ import React from "react";
 
 const SkillsSection = () => {
   return (
-    <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-3 mt-12">
+    <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12">
       <div className="flex justify-between items-center w-full h-full">
         <div className="flex items-center gap-2">
-          <h3>
+          <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold">
             <span className="text-[#C778DD]">#</span>skills
           </h3>
           <div className="h-[1px] w-[211px] bg-[#C778DD]" />
         </div>
       </div>
-      <div className="flex justify-between w-full mt-5">
-        <div className="relative">
+      <div className="md:flex justify-between mt-5">
+        <div className="md:w-full hidden md:block">
           <Image src={SkillsBanner} className="w-full lg:w-[600px]" alt="" />
         </div>
-        <div className="grid grid-cols-3 gap-3 mt-5">
-          <div className="border border-[#ABB2BF] md:w-[150px] lg:w-[200px] xl:w-full h-fit">
+        <div className="grid md:grid-cols-3 gap-3 mt-5 w-full">
+          <div className="border border-[#ABB2BF] md:w-[150px] lg:max-w-[200px] w-full xl:w-full h-fit">
             <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
               Languages
             </h3>
             <div className="px-2 text-[#ABB2BF]">Typescript C# Javascript</div>
           </div>
-          <div className="grid grid-flow-row gap-3 lg:w-[200px] xl:w-full md:w-[150px]">
+          <div className="grid grid-flow-row gap-3 lg:max-w-[200px] w-full xl:w-full md:w-[150px]">
             <div className="border border-[#ABB2BF] w-full h-fit">
               <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
                 Database
@@ -40,7 +40,7 @@ const SkillsSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-[200px] grid grid-flow-row gap-3 lg:w-[200px] xl:w-full md:w-[150px]">
+          <div className="w-[200px] grid grid-flow-row gap-3 lg:max-w-[200px] w-full xl:w-full md:w-[150px]">
             <div className="border border-[#ABB2BF] w-full h-fit">
               <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
                 Tools

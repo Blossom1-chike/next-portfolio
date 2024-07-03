@@ -4,14 +4,14 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 py-3 mt-12">
+    <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12">
       <div className="flex items-center gap-2">
-        <h3>
+        <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold">
           <span className="text-[#C778DD]">#</span>contacts
         </h3>
         <div className="h-[1px] w-[251px] bg-[#C778DD]" />
       </div>
-      <div className="flex justify-between mt-5 gap-5">
+      <div className="flex md:flex-row flex-col justify-between mt-5 gap-5">
         <p className="text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px]">
           I’m interested in freelance opportunities. However, if you have other
           request or question, don’t hesitate to contact me

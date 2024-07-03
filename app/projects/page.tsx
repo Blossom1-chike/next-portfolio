@@ -1,25 +1,26 @@
-import { Dots1 } from "@/public/assets";
+import { Rectangle2, Rectangle3 } from "@/public/assets";
 import { projects } from "@/utils/data/projects";
 import Image from "next/image";
 import React from "react";
 
-const ProjectSection = () => {
+const Projects = () => {
   return (
-    <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-4">
-      <div className="flex justify-between items-center w-full h-full">
-        <Image src={Dots1} alt="" className="absolute left-0 top-20 w-[25px]" />
-        <div className="flex justify-between items-center w-full">
-          <div className="flex items-center gap-2">
-            <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold">
-              <span className="text-[#C778DD]">#</span>projects
-            </h3>
-            <div className="h-[1px] md:w-[311px] w-[200px] bg-[#C778DD]" />
-          </div>
-          <div className="md:block hidden">
-            <h3>View all ~~&gt;</h3>
-          </div>
-        </div>
-      </div>
+    <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-5 md:mt-12">
+      <Image
+        className="absolute md:right-0 -right-7 w-[50px] top-18"
+        src={Rectangle2}
+        alt=""
+      />
+
+      <Image
+        className="absolute md:left-0 -left-7 w-[50px] top-[240px]"
+        src={Rectangle3}
+        alt=""
+      />
+      <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold">
+        <span className="text-[#C778DD]">/</span>projects
+      </h3>
+      <p className="mt-4">List of my projects</p>
       <div className="flex md:flex-row flex-col md:gap-4 gap-8 mt-5 ">
         {projects.map((project, index) => (
           <div className="border border-[#ABB2BF] w-full h-fit" key={index}>
@@ -43,11 +44,8 @@ const ProjectSection = () => {
           </div>
         ))}
       </div>
-      <div className="md:hidden mt-4 text-right">
-        <h3>View all ~~&gt;</h3>
-      </div>
     </div>
   );
 };
 
-export default ProjectSection;
+export default Projects;
