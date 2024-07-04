@@ -7,7 +7,7 @@ import MobileNavbar from "./MobileNavbar";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const pathname =  usePathname();
+  const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
   const links = [
     {
@@ -35,15 +35,21 @@ const Navbar = () => {
         <section className="flex flex-col items-center gap-3 top-0 md:left-3 xl:left-12 lg:left-8 hidden md:block md:fixed">
           <div className="h-[191px] w-[1px] bg-[#ABB2BF] mx-auto mb-2" />
           <div className="flex flex-col gap-3">
-            <Image
-              src={Github}
-              alt="Github"
-              width={20}
-              height={20}
-              className="w-full"
-            />
-            <Image src={LinkedIn} width={20} height={20} alt="LinkedIN" />
-            <Image src={Email} width={20} height={20} alt="Email" />
+            <Link href={"https://github.com/Blossom1-chike"}>
+              <Image
+                src={Github}
+                alt="Github"
+                width={20}
+                height={20}
+                className="w-full"
+              />
+            </Link>
+            <Link href={"https://www.linkedin.com/in/blossom-chikezie/"}>
+              <Image src={LinkedIn} width={20} height={20} alt="LinkedIn" />
+            </Link>
+            <Link href={"mailto:chinanuchikezie515@gmail.com"}>
+              <Image src={Email} width={20} height={20} alt="Email" />
+            </Link>
           </div>
         </section>
         <Link href={"/"} className="flex gap-2 items-center">
@@ -55,7 +61,11 @@ const Navbar = () => {
             {links.map((link, index) => (
               <Link
                 key={index}
-                className={isActive(link.path) ? "font-medium text-white" : "text-[#ABB2BF]"}
+                className={
+                  isActive(link.path)
+                    ? "font-medium text-white"
+                    : "text-[#ABB2BF]"
+                }
                 href={link.path}
               >
                 <span className="text-[#C778DD]">#</span>

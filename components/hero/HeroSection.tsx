@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import { handleScrollAnimation } from "@/utils/script";
 
 gsap.registerPlugin(useGSAP);
 
@@ -40,7 +41,7 @@ const HeroSection = () => {
     <div className="flex md:flex-row flex-col justify-between items-center w-full h-full max-w-[1350px] overflow-hidden text-white mx-auto mt-5 md:mt-0 lg:px-24 md:px-16 px-10 xl:px-0 py-3">
       <div className="grid grid-flow-row gap-5 w-full lg:max-w-[600px]">
         <div>
-          <h1 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold leading-[42px] text-wrap typed">
+          <h1 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold leading-[42px] text-wrap md:typed">
             Blossom is a <span className="text-[#C778DD]">web designer</span>{" "}
             and{" "}
           </h1>

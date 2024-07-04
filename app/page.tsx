@@ -8,20 +8,7 @@ import SkillsSection from "@/components/skills/Skills";
 import { handleScrollAnimation, throttle } from "@/utils/script";
 import { useEffect } from "react";
 
-export default function Home() {
-  useEffect(() => {
-   const scrollElements = document.querySelectorAll(".js-scroll");
-
-    window.addEventListener("scroll", () => {
-      throttle(handleScrollAnimation, 50, scrollElements);
-    });
-
-    return () => {
-      window.addEventListener("scroll", () => {
-        throttle(handleScrollAnimation, 50, scrollElements);
-      });
-    };
-  },[]);
+export default function Home() { 
   return (
     <div>
       <HeroSection />

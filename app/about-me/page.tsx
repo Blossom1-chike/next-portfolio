@@ -1,4 +1,3 @@
-"use client";
 import FunFact from "@/components/fun-fact/FunFact";
 import {
   MemojiAbout,
@@ -6,24 +5,10 @@ import {
   Rectangle2,
   Rectangle3,
 } from "@/public/assets";
-import { throttle, handleScrollAnimation } from "@/utils/script";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 
 const AboutMe = () => {
-  useEffect(() => {
-    const scrollElements = document.querySelectorAll(".js-scroll");
-
-    window.addEventListener("scroll", () => {
-      throttle(handleScrollAnimation, 50, scrollElements);
-    });
-
-    return () => {
-      window.addEventListener("scroll", () => {
-        throttle(handleScrollAnimation, 50, scrollElements);
-      });
-    };
-  }, []);
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12">
       <Image
@@ -77,7 +62,7 @@ const AboutMe = () => {
           </h3>
         </div>
 
-        <div className="flex md:flex-row flex-col gap-4 mt-8 js-scroll fade-in-bottom">
+        <div className="flex md:flex-row flex-col gap-4 mt-8">
           <div className="border border-[#ABB2BF] w-fit h-fit">
             <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
               Languages

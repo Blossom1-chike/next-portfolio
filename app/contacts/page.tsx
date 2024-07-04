@@ -6,25 +6,11 @@ import {
   Rectangle2,
   Twitter,
 } from "@/public/assets";
-import { throttle, handleScrollAnimation } from "@/utils/script";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 const Contacts = () => {
-  useEffect(() => {
-    const scrollElements = document.querySelectorAll(".js-scroll");
- 
-     window.addEventListener("scroll", () => {
-       throttle(handleScrollAnimation, 50, scrollElements);
-     });
- 
-     return () => {
-       window.addEventListener("scroll", () => {
-         throttle(handleScrollAnimation, 50, scrollElements);
-       });
-     };
-   },[]);
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12 h-full">
       <Image
@@ -68,7 +54,7 @@ const Contacts = () => {
         <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold mt-12">
           <span className="text-[#C778DD]">#</span>all-media
         </h3>
-        <div className="flex gap-8 mt-5 items-center typed">
+        <div className="flex gap-8 mt-5 items-center md:typed">
           <Link className="flex gap-2" href={""}>
             <Image src={Twitter} alt="" />
             <h4>blosomtechsiast</h4>

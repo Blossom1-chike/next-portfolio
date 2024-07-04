@@ -23,7 +23,7 @@ const MobileNavbar = () => {
   }, [pathname]);
 
   return (
-    <div className="lg:hidden">
+    <div className="md:hidden">
       <button className="cursor-pointer" onClick={() => setShowMenu(!showMenu)}>
         <Image src={Hamburger} alt="Hamburger" />
       </button>
@@ -75,9 +75,15 @@ const MobileNavbar = () => {
           </ul>
 
           <div className="flex justify-center gap-5">
-            <Image className="w-8 h-8" src={Github} alt="Github" />
-            <Image className="w-8 h-8" src={LinkedIn} alt="LinkedIN" />
-            <Image className="w-8 h-8" src={Email} alt="Email" />
+            <Link href={"https://github.com/Blossom1-chike"}>
+              <Image src={Github} alt="Github" className="w-8 h-8" />
+            </Link>
+            <Link href={"https://www.linkedin.com/in/blossom-chikezie/"}>
+              <Image src={LinkedIn} className="w-8 h-8" alt="LinkedIn" />
+            </Link>
+            <Link href={"mailto:chinanuchikezie515@gmail.com"}>
+              <Image src={Email} className="w-8 h-8" alt="Email" />
+            </Link>
           </div>
         </div>
       )}
