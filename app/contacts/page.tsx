@@ -48,6 +48,16 @@ const Contacts = () => {
               <Image src={LinkedIn} alt="" />
               <h5 className="text-[#ABB2BF]">blossom-chikezie</h5>
             </div>
+            <div className="flex gap-2">
+              <Image src={Resume} width={20} height={20} alt="" />
+              <a
+                href="/Blossom.pdf"
+                download={"Blossom Chikezie's Resume"}
+                className="text-[#ABB2BF]"
+              >
+                Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -55,7 +65,7 @@ const Contacts = () => {
         <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold mt-12">
           <span className="text-[#C778DD]">#</span>all-media
         </h3>
-        <div className="flex gap-8 mt-5 items-center md:typed">
+        <div className="flex md:flex-row flex-col gap-8 mt-5 md:items-center md:typed">
           <Link className="flex gap-2" href={""}>
             <Image src={Twitter} alt="" />
             <h4>blosomtechsiast</h4>
@@ -65,16 +75,6 @@ const Contacts = () => {
             <Image src={LinkedIn} alt="" />
             <h4>blossom-chikezie</h4>
           </Link>
-          <div className="flex gap-2">
-            <Image src={Resume} width={20} height={20} alt="" />
-            <a
-              href="/Blossom.pdf"
-              download={"Blossom Chikezie's Resume"}
-              className="text-[#ABB2BF]"
-            >
-              Resume
-            </a>
-          </div>
         </div>
       </div>
     </div>
