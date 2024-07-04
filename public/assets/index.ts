@@ -16,8 +16,16 @@ import Rectangle2 from "@/assets/rectangle-2.svg";
 import Rectangle3 from "@/assets/rectangle-3.svg";
 import Hamburger from "@/assets/hamburger.svg";
 import Close from "@/assets/close.svg";
+import Korensi from "@/assets/korensi.svg";
+import AfroShop from "@/assets/afroshop.svg";
+import Qoray from "@/assets/qoray.svg";
+import Resume from "@/assets/card.svg";
 
 export  {
+    Resume,
+    AfroShop,
+    Qoray,
+    Korensi,
     Close,
     Hamburger,
     Rectangle3,

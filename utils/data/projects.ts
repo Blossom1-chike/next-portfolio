@@ -1,25 +1,25 @@
-import { Banner } from "@/public/assets";
+import { AfroShop, Banner, Korensi, Qoray } from "@/public/assets";
 
 export const projects = [
     {
-        name: "ChertNodes",
-        image: Banner,
-        stack: "HTML SCSS Python Flask",
-        description: "Minecraft servers hosting",
-        live_url: "",
+        name: "Korensi",
+        image: Korensi,
+        stack: "HTML SCSS Tailwind Javascript React Django",
+        description: "Seamless Tap and Pay transportation system",
+        live_url: "https://korensi-web.netlify.app/signin",
     },
     {
-        name: "ProtectX",
-        image: Banner,
-        stack: "React Express Discord.js Node.js HTML SCSS Python Flask",
-        description: "Discord anti-crash bot",
-        live_url: "",
+        name: "AfroShop",
+        image: AfroShop,
+        stack: "React Strapi.js HTML SCSS CSS",
+        description: "E-Commerce application",
+        live_url: "https://afroshop-frontend.vercel.app/",
     },
     {
-        name: "Kahoot Answers Viewer",
-        image: Banner,
-        stack: "CSS Express Node.js",
-        description: "Get answers to your kahoot quiz",
-        live_url: "",
+        name: "Qoray",
+        image: Qoray,
+        stack: "HTML SCSS Tailwind Javascript React Django",
+        description: "Experience the future of automotive retail",
+        live_url: "https://qoray-dev.netlify.app/signin",
     },
 ]

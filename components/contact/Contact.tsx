@@ -1,4 +1,4 @@
-import { Email, LinkedIn } from "@/public/assets";
+import { Email, LinkedIn, Resume } from "@/public/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -25,6 +25,16 @@ const ContactSection = () => {
           <div className="flex gap-2">
             <Image src={LinkedIn} alt="" />
             <h5 className="text-[#ABB2BF]">blossom-chikezie</h5>
+          </div>
+          <div className="flex gap-2">
+            <Image src={Resume} width={20} height={20} alt="" />
+            <a
+              href="/Blossom.pdf"
+              download={"Blossom Chikezie's Resume"}
+              className="text-[#ABB2BF]"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>

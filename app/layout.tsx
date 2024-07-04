@@ -32,7 +32,7 @@ export default function RootLayout({
         throttle(handleScrollAnimation, 50, scrollElements);
       });
     };
-  }, []);
+  });
 
   return (
     <html lang="en">

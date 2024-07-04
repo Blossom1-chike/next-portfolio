@@ -4,6 +4,7 @@ import {
   LinkedIn,
   MemojiAsset1,
   Rectangle2,
+  Resume,
   Twitter,
 } from "@/public/assets";
 import Image from "next/image";
@@ -64,6 +65,16 @@ const Contacts = () => {
             <Image src={LinkedIn} alt="" />
             <h4>blossom-chikezie</h4>
           </Link>
+          <div className="flex gap-2">
+            <Image src={Resume} width={20} height={20} alt="" />
+            <a
+              href="/Blossom.pdf"
+              download={"Blossom Chikezie's Resume"}
+              className="text-[#ABB2BF]"
+            >
+              Resume
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { Dots1 } from "@/public/assets";
 import { projects } from "@/utils/data/projects";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ProjectSection = () => {
@@ -34,12 +35,12 @@ const ProjectSection = () => {
               {project.stack}
             </p>
             <section className="px-2 py-4 flex flex-col gap-2">
-              <h4>{project.name}</h4>
+              <h4 className="text-xl">{project.name}</h4>
               <h5 className="text-[#ABB2BF]">{project.description}</h5>
               <div>
-                <button className="border border-[#C778DD] py-1 px-4">
+                <Link href={project.live_url} className="border border-[#C778DD] py-1 px-4  hover:bg-[#C778DD] hover:text-white hover:bg-opacity-40">
                   Live &lt;~&gt;
-                </button>
+                </Link>
               </div>
             </section>
           </div>
