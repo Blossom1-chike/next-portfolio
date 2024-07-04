@@ -19,7 +19,7 @@ const ContactSection = () => {
         <div className="border border-[#ABB2BF] p-4 flex flex-col gap-4 w-fit">
           <h4>Message me here</h4>
           <div className="flex gap-2">
-            <Image src={Email} alt="" />
+            <Image src={Email} width={20} height={20} alt="" />
             <h5 className="text-[#ABB2BF]">chinanuchikezie515@gmail.com</h5>
           </div>
           <div className="flex gap-2">

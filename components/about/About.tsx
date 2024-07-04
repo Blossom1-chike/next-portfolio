@@ -16,8 +16,8 @@ const AboutSection = () => {
         </h3>
         <div className="h-[1px] w-[251px] bg-[#C778DD]" />
       </div>
-      <div className="flex md:flex-row flex-col justify-between gap-8 items-center w-full h-full mt-3">
-        <div className="text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px]">
+      <div className="flex md:flex-row flex-col justify-between gap-8 items-center w-full h-full mt-8">
+        <div className="text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px] js-scroll slide-in-left">
           <p>Hello, i’m Blossom!</p>
           <p className="mt-6">
             I’m a self-taught front-end developer based in Lagos, Nigeria. I can

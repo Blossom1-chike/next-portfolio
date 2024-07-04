@@ -20,9 +20,9 @@ const Footer = () => {
       <div className="grid grid-flow-row gap-2">
         <h3 className="text-center md:text-left">Media</h3>
         <div className="flex md:gap-5 mx-auto md:mx-0 gap-5">
-          <Image src={Github} alt="Logo" />
-          <Image src={LinkedIn} alt="Logo" />
-          <Image src={Twitter} alt="Logo" />
+          <Image src={Github} width={20} height={20} alt="Logo" />
+          <Image src={LinkedIn} width={20} height={20} alt="Logo" />
+          <Image src={Twitter} width={20} height={20} alt="Logo" />
         </div>
       </div>
     </div>

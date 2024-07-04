@@ -1,9 +1,24 @@
+"use client";
 import { Rectangle2, Rectangle3 } from "@/public/assets";
 import { projects } from "@/utils/data/projects";
+import { throttle, handleScrollAnimation } from "@/utils/script";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Projects = () => {
+  useEffect(() => {
+    const scrollElements = document.querySelectorAll(".js-scroll");
+ 
+     window.addEventListener("scroll", () => {
+       throttle(handleScrollAnimation, 50, scrollElements);
+     });
+ 
+     return () => {
+       window.addEventListener("scroll", () => {
+         throttle(handleScrollAnimation, 50, scrollElements);
+       });
+     };
+   },[]);
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-5 md:mt-12">
       <Image

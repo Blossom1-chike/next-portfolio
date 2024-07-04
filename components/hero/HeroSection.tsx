@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -17,7 +18,7 @@ const HeroSection = () => {
     mm.add("(min-width: 768px)", () => {
       tl.set(imageContainer.current, {
         display: "grid",
-        delay: 2,
+        delay: 1,
       });
       tl.fromTo(
         imageContainer.current,
@@ -36,15 +37,14 @@ const HeroSection = () => {
   });
 
   return (
-    <div className="flex md:flex-row flex-col justify-between items-center w-full h-full max-w-[1350px] overflow-hidden text-white mx-auto lg:px-24 md:px-16 px-10 xl:px-0 py-3">
+    <div className="flex md:flex-row flex-col justify-between items-center w-full h-full max-w-[1350px] overflow-hidden text-white mx-auto mt-5 md:mt-0 lg:px-24 md:px-16 px-10 xl:px-0 py-3">
       <div className="grid grid-flow-row gap-5 w-full lg:max-w-[600px]">
         <div>
           <h1 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold leading-[42px] text-wrap typed">
-            Blossom is a{" "}
-            <span className="text-[#C778DD] typed">web designer</span> and{" "}
+            Blossom is a <span className="text-[#C778DD]">web designer</span>{" "}
+            and{" "}
           </h1>
           <h1 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold leading-[42px] text-wrap typed">
-            
             <span className="text-[#C778DD] typed">front-end developer</span>
           </h1>
         </div>
@@ -52,9 +52,12 @@ const HeroSection = () => {
         <h3>
           She crafts responsive websites where technologies meet creativity
         </h3>
-        <button className="border border-[#C778DD] py-2 px-4 w-fit">
+        <Link
+          href={"/contacts"}
+          className="border border-[#C778DD] py-2 px-4 w-fit hover:bg-[#C778DD] hover:text-white hover:bg-opacity-40"
+        >
           Contact Me !!
-        </button>
+        </Link>
       </div>
       <div className="relative">
         <Image
@@ -62,8 +65,14 @@ const HeroSection = () => {
           src={MemojiAsset1}
           alt=""
         />
-        {/* <Image className="absolute left-0" src={MemojiAsset2} alt="" /> */}
-        <Image ref={imageContainer} src={Memoji} className="w-full" alt="memomji" />
+        <Image
+          src={Memoji}
+          ref={imageContainer}
+          className="w-full"
+          width={200}
+          height={200}
+          alt="memoji"
+        />
       </div>
     </div>
   );

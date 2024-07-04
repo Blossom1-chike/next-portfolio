@@ -1,6 +1,5 @@
 import { MemojiAsset1, MemojiAsset2 } from "@/public/assets";
 import { facts } from "@/utils/data/fact";
-import Image from "next/image";
 import React from "react";
 
 const FunFact = () => {
@@ -9,7 +8,7 @@ const FunFact = () => {
       <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold">
         <span className="text-[#C778DD]">#</span>my-fun-facts
       </h3>
-      <div className="flex justify-between mt-6">
+      <div className="flex justify-between js-scroll slide-right  mt-6">
         <div className="grid grid-cols-2 gap-3">
           {facts.map((fact, index) => (
             <div

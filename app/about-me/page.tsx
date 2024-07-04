@@ -1,10 +1,29 @@
-import AboutSection from "@/components/about/About";
+"use client";
 import FunFact from "@/components/fun-fact/FunFact";
-import { MemojiAbout, MemojiAsset1, Rectangle2, Rectangle3 } from "@/public/assets";
+import {
+  MemojiAbout,
+  MemojiAsset1,
+  Rectangle2,
+  Rectangle3,
+} from "@/public/assets";
+import { throttle, handleScrollAnimation } from "@/utils/script";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const AboutMe = () => {
+  useEffect(() => {
+    const scrollElements = document.querySelectorAll(".js-scroll");
+
+    window.addEventListener("scroll", () => {
+      throttle(handleScrollAnimation, 50, scrollElements);
+    });
+
+    return () => {
+      window.addEventListener("scroll", () => {
+        throttle(handleScrollAnimation, 50, scrollElements);
+      });
+    };
+  }, []);
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12">
       <Image
@@ -24,8 +43,8 @@ const AboutMe = () => {
       <p className="mt-4 mb-6">Who am i?</p>
 
       <div className="flex md:flex-row flex-col justify-between gap-8 items-center w-full h-full">
-        <div className="text-[#ABB2BF] lg:max-w-[520px] mt-9 xl:max-w-[700px]">
-          <p>Hello, i’m Blossom!</p>
+        <div className="text-[#ABB2BF] lg:w-[520px] mt-9 xl:max-w-[700px]">
+          <p className="typed">Hello, i’m Blossom!</p>
           <p className="mt-4">
             I’m a self-taught front-end developer based in Lagos, Nigeria. I can
             develop responsive websites from scratch and raise them into modern
@@ -58,7 +77,7 @@ const AboutMe = () => {
           </h3>
         </div>
 
-        <div className="flex md:flex-row flex-col gap-4 mt-8">
+        <div className="flex md:flex-row flex-col gap-4 mt-8 js-scroll fade-in-bottom">
           <div className="border border-[#ABB2BF] w-fit h-fit">
             <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
               Languages

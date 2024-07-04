@@ -1,4 +1,9 @@
-import { Dots1, MemojiAsset1, MemojiAsset2, SkillsBanner } from "@/public/assets";
+import {
+  Dots1,
+  MemojiAsset1,
+  MemojiAsset2,
+  SkillsBanner,
+} from "@/public/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -13,46 +18,56 @@ const SkillsSection = () => {
           <div className="h-[1px] w-[211px] bg-[#C778DD]" />
         </div>
       </div>
-      <div className="md:flex justify-between mt-5">
-        <div className="md:w-full hidden md:block">
+      <div className="md:flex justify-between gap-10 mt-5">
+        <div className="md:w-full hidden lg:block">
           <Image src={SkillsBanner} className="w-full lg:w-[600px]" alt="" />
         </div>
-        <div className="grid md:grid-cols-3 gap-3 mt-5 w-full">
-          <div className="border border-[#ABB2BF] md:w-[150px] lg:max-w-[200px] w-full xl:w-full h-fit">
-            <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
-              Languages
-            </h3>
-            <div className="px-2 text-[#ABB2BF]">Typescript C# Javascript</div>
-          </div>
-          <div className="grid grid-flow-row gap-3 lg:max-w-[200px] w-full xl:w-full md:w-[150px]">
-            <div className="border border-[#ABB2BF] w-full h-fit">
-              <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
-                Database
-              </h3>
-              <div className="px-2 text-[#ABB2BF]">MySQLWorkbench Mongo</div>
-            </div>
-            <div className="border border-[#ABB2BF] w-full h-fit">
-              <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
-                Other
-              </h3>
-              <div className="px-2 text-[#ABB2BF]">
-                HTML CSS EJS SCSS REST Node.js
+        <div className="border-t lg:border-none">
+          <p className="w-full hidden lg:block">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div className="grid md:grid-cols-3 gap-4 w-full">
+            <div className="flex flex-col items-center">
+              <div className="bg-white hidden md:block w-[1px] h-[100px]" />
+              <div className="border border-[#ABB2BF] w-full h-fit">
+                <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
+                  Languages
+                </h3>
+                <div className="px-2 text-[#ABB2BF]">
+                  Typescript C# Javascript Java 
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[200px] grid grid-flow-row gap-3 lg:max-w-[200px] w-full xl:w-full md:w-[150px]">
-            <div className="border border-[#ABB2BF] w-full h-fit">
-              <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
-                Tools
-              </h3>
-              <div className="px-2 text-[#ABB2BF]">VSCode Git Linux</div>
+            <div className="w-full flex flex-col items-center">
+              <div className="bg-white hidden md:block w-[1px] h-[200px]" />
+              <div className="border border-[#ABB2BF] w-full h-fit">
+                <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
+                  Database
+                </h3>
+                <div className="px-2 text-[#ABB2BF]">MySQLWorkbench Mongo</div>
+              </div>
+              <div className="border border-[#ABB2BF] w-full h-fit mt-4">
+                <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
+                  Other
+                </h3>
+                <div className="px-2 text-[#ABB2BF]">
+                  HTML CSS EJS SCSS REST Node.js
+                </div>
+              </div>
             </div>
+            <div className="w-full flex flex-col items-center">
+              <div className="bg-white hidden md:block w-[1px] h-[150px]" />
+              <div className="border border-[#ABB2BF] w-full h-fit">
+                <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
+                  Tools
+                </h3>
+                <div className="px-2 text-[#ABB2BF]">VSCode Git Linux</div>
+              </div>
 
-            <div className="border border-[#ABB2BF] w-full h-fit">
-              <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
-                Frameworks
-              </h3>
-              <div className="px-2 text-[#ABB2BF]">React Next Express.js</div>
+              <div className="border border-[#ABB2BF] w-full h-fit mt-4">
+                <h3 className="font-semibold border-b border-b-[#ABB2BF] px-2">
+                  Frameworks
+                </h3>
+                <div className="px-2 text-[#ABB2BF]">React Next Express.js</div>
+              </div>
             </div>
           </div>
         </div>

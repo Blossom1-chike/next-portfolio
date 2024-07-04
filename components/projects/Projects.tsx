@@ -20,13 +20,15 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col md:gap-4 gap-8 mt-5 ">
+      <div className="flex md:flex-row flex-col md:gap-4 gap-8 mt-5 js-scroll fade-in-bottom">
         {projects.map((project, index) => (
           <div className="border border-[#ABB2BF] w-full h-fit" key={index}>
             <Image
               className="border-b border-b-[#ABB2BF] w-full"
               src={project.image}
               alt="Image"
+              width={200}
+              height={200}
             />
             <p className="border-b border-b-[#ABB2BF] p-2 text-[#ABB2BF]">
               {project.stack}

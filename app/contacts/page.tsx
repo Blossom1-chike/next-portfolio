@@ -1,3 +1,4 @@
+"use client";
 import {
   Email,
   LinkedIn,
@@ -5,11 +6,25 @@ import {
   Rectangle2,
   Twitter,
 } from "@/public/assets";
+import { throttle, handleScrollAnimation } from "@/utils/script";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contacts = () => {
+  useEffect(() => {
+    const scrollElements = document.querySelectorAll(".js-scroll");
+ 
+     window.addEventListener("scroll", () => {
+       throttle(handleScrollAnimation, 50, scrollElements);
+     });
+ 
+     return () => {
+       window.addEventListener("scroll", () => {
+         throttle(handleScrollAnimation, 50, scrollElements);
+       });
+     };
+   },[]);
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12 h-full">
       <Image
@@ -39,7 +54,7 @@ const Contacts = () => {
           <div className="border border-[#ABB2BF] p-4 flex flex-col gap-4 w-fit">
             <h4>Message me here</h4>
             <div className="flex gap-2">
-              <Image src={Email} alt="" />
+              <Image src={Email} width={20} height={20} alt="" />
               <h5 className="text-[#ABB2BF]">chinanuchikezie515@gmail.com</h5>
             </div>
             <div className="flex gap-2">
@@ -53,7 +68,7 @@ const Contacts = () => {
         <h3 className="lg:text-[32px] md:text-[24px] text-2xl font-semibold mt-12">
           <span className="text-[#C778DD]">#</span>all-media
         </h3>
-        <div className="flex gap-8 mt-5 items-center">
+        <div className="flex gap-8 mt-5 items-center typed">
           <Link className="flex gap-2" href={""}>
             <Image src={Twitter} alt="" />
             <h4>blosomtechsiast</h4>
