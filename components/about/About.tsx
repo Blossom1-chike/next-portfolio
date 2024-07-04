@@ -1,8 +1,33 @@
 import { MemojiAbout, MemojiAsset1, Rectangle2 } from "@/public/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const AboutSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null, // Use the viewport as the container
+        threshold: 0.3, // Adjust this value to determine when the callback should be triggered
+      }
+    );
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+    }
+
+    return () => {
+      if (divRef.current) {
+        observer.unobserve(divRef.current);
+      }
+    };
+  });
+     
   return (
     <div className="relative overflow-hidden max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-12">
       <Image
@@ -17,7 +42,7 @@ const AboutSection = () => {
         <div className="h-[1px] w-[251px] bg-[#C778DD]" />
       </div>
       <div className="flex md:flex-row flex-col justify-between gap-8 items-center w-full h-full mt-8">
-        <div className="text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px] js-scroll slide-in-left">
+        <div ref={divRef} className={`text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px] ${isVisible ? "scrolled" : ""} js-scroll slide-in-left`}>
           <p>Hello, i’m Blossom!</p>
           <p className="mt-6">
             I’m a self-taught front-end developer based in Lagos, Nigeria. I can

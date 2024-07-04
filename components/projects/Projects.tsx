@@ -2,9 +2,35 @@ import { Dots1 } from "@/public/assets";
 import { projects } from "@/utils/data/projects";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ProjectSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null, // Use the viewport as the container
+        threshold: 0.3, // Adjust this value to determine when the callback should be triggered
+      }
+    );
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+    }
+
+    return () => {
+      if (divRef.current) {
+        observer.unobserve(divRef.current);
+      }
+    };
+    
+  });
+  
   return (
     <div className="relative max-w-[1350px] text-white mx-auto lg:px-24 md:px-16 xl:px-0 px-10 py-3 mt-4">
       <div className="flex justify-between items-center w-full h-full">
@@ -21,7 +47,7 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col md:gap-4 gap-8 mt-5 js-scroll fade-in-bottom">
+      <div ref={divRef} className={`flex md:flex-row flex-col md:gap-4 gap-8 mt-5 ${isVisible ? "scrolled" : ""} js-scroll fade-in-bottom`}>
         {projects.map((project, index) => (
           <div className="border border-[#ABB2BF] w-full h-fit" key={index}>
             <Image

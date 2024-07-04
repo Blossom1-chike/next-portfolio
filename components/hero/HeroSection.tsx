@@ -1,7 +1,7 @@
 "use client";
 import { Memoji, MemojiAsset1, MemojiAsset2 } from "@/public/assets";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import { handleScrollAnimation } from "@/utils/script";
 gsap.registerPlugin(useGSAP);
 
 const HeroSection = () => {
+  
   const imageContainer = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
