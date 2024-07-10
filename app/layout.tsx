@@ -4,8 +4,6 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import { throttle, handleScrollAnimation } from "@/utils/script";
-import { useEffect } from "react";
 
 const fira = Fira_Code({ subsets: ["latin"], variable: "--font--firacode" });
 

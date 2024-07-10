@@ -1,4 +1,3 @@
-import { MemojiAsset1, MemojiAsset2 } from "@/public/assets";
 import { facts } from "@/utils/data/fact";
 import React from "react";
 

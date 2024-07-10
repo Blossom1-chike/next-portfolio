@@ -1,11 +1,10 @@
 "use client";
-import { Memoji, MemojiAsset1, MemojiAsset2 } from "@/public/assets";
+import { Memoji, MemojiAsset1 } from "@/public/assets";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
-import { handleScrollAnimation } from "@/utils/script";
 
 gsap.registerPlugin(useGSAP);
 
