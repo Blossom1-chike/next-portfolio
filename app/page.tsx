@@ -29,9 +29,13 @@ export default function Home() {
             sameAs: [
               "https://github.com/Blossom1-chike",
               "https://www.linkedin.com/in/blossom-chikezie/",
-              "https://twitter.com/blosomtechsiast"
+              "https://twitter.com/blosomtechsiast",
               // Other social profiles
             ],
+            author: {
+              "@type": "Person",
+              name: "Blossom Chikezie",
+            },
             jobTitle: "Software Engineer",
             alumniOf: "Babcock University",
           })}
