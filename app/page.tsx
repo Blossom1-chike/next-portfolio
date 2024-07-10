@@ -18,7 +18,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Blossom Chikezie, software engineer, portfolio, Babcock University, frontend developer, 18 years"
+          content="Blossom Chikezie, software engineer, portfolio, Babcock University, frontend developer, 18 years, blossom, best graduating student, korensi, prunedge, seventh day adventist, betterchalk"
         />
         <script type="application/ld+json">
           {JSON.stringify({
