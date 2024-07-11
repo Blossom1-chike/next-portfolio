@@ -17,9 +17,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Person",
+              name: "Blossom Chikezie",
+              url: "https://blossom-portfolio.vercel.app/",
+              sameAs: [
+                "https://github.com/Blossom1-chike",
+                "https://www.linkedin.com/in/blossom-chikezie/",
+                "https://twitter.com/blosomtechsiast",
+                // Other social profiles
+              ],
+              author: {
+                "@type": "Person",
+                name: "Blossom Chikezie",
+              },
+              jobTitle: "Software Engineer",
+              alumniOf: "Babcock University",
+            }),
+          }}
+        />
+      </head>
       <body className={fira.className}>
         <Navbar />
         {children}

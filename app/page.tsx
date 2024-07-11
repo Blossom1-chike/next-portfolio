@@ -20,26 +20,6 @@ export default function Home() {
           name="keywords"
           content="Blossom Chikezie, software engineer, portfolio, Babcock University, frontend developer, 18 years, blossom, best graduating student, korensi, prunedge, seventh day adventist, betterchalk"
         />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Person",
-            name: "Blossom Chikezie",
-            url: "https://blossom-portfolio.vercel.app/",
-            sameAs: [
-              "https://github.com/Blossom1-chike",
-              "https://www.linkedin.com/in/blossom-chikezie/",
-              "https://twitter.com/blosomtechsiast",
-              // Other social profiles
-            ],
-            author: {
-              "@type": "Person",
-              name: "Blossom Chikezie",
-            },
-            jobTitle: "Software Engineer",
-            alumniOf: "Babcock University",
-          })}
-        </script>
       </Head>
       <HeroSection />
       <QuoteSection />

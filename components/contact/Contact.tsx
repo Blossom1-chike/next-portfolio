@@ -11,7 +11,7 @@ const ContactSection = () => {
         </h3>
         <div className="h-[1px] w-[251px] bg-[#C778DD]" />
       </div>
-      <div className="flex md:flex-row flex-col justify-between mt-5 gap-5">
+      <div className="flex md:flex-row flex-col justify-between mt-5">
         <p className="text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px]">
           I’m interested in freelance opportunities. However, if you have other
           request or question, don’t hesitate to contact me
@@ -20,7 +20,7 @@ const ContactSection = () => {
           <h4>Message me here</h4>
           <div className="flex gap-2">
             <Image src={Email} width={20} height={20} alt="" />
-            <h5 className="text-[#ABB2BF]">chinanuchikezie515@gmail.com</h5>
+            <h5 className="text-[#ABB2BF] w-full">chinanuchikezie515@gmail.com</h5>
           </div>
           <div className="flex gap-2">
             <Image src={LinkedIn} alt="" />
