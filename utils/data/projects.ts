@@ -6,7 +6,7 @@ export const projects = [
         image: Korensi,
         stack: "HTML SCSS Tailwind Javascript React Django",
         description: "Seamless Tap and Pay transportation system",
-        live_url: "https://korensi-web.netlify.app/signin",
+        live_url: "https://admin.korensi.com/",
     },
     {
         name: "AfroShop",
