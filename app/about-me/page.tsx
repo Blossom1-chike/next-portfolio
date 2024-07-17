@@ -31,13 +31,13 @@ const AboutMe = () => {
         <div className="text-[#ABB2BF] lg:w-[520px] mt-9 xl:max-w-[700px]">
           <p className="typed">Hello, i’m Blossom!</p>
           <p className="mt-4">
-            I’m a self-taught front-end developer based in Lagos, Nigeria. I can
+            I’m a front-end developer based in Lagos, Nigeria. I can
             develop responsive websites from scratch and raise them into modern
             user-friendly web experiences.{" "}
           </p>
           <p className="mt-4">
             Transforming my creativity and knowledge into a websites has been my
-            passion for over a year. I have been helping various clients to
+            passion for 2+ years. I have been helping various clients to
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>

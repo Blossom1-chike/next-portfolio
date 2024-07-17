@@ -45,13 +45,13 @@ const AboutSection = () => {
         <div ref={divRef} className={`text-[#ABB2BF] lg:max-w-[520px] xl:max-w-[700px] ${isVisible ? "scrolled" : ""} js-scroll slide-in-left`}>
           <p>Hello, i’m Blossom!</p>
           <p className="mt-6">
-            I’m a self-taught front-end developer based in Lagos, Nigeria. I can
+            I’m a front-end developer based in Lagos, Nigeria. I can
             develop responsive websites from scratch and raise them into modern
             user-friendly web experiences.{" "}
           </p>
           <p className="mt-6">
             Transforming my creativity and knowledge into a websites has been my
-            passion for over a year. I have been helping various clients to
+            passion for over 2+ years. I have been helping various clients to
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>
